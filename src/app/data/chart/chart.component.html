@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>test</h1>
+  <table>
+    <tr class="row">
+      <td class="col"><canvas id="lineChart" width="1100" height="720"></canvas></td>
+      <td class="col"></td>
+    </tr>
+  </table>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <span *ngIf="hero!==editHero">{{hero.title}}</span>
+      <input *ngIf="hero===editHero" [(ngModel)]="hero.name">
+    </li>
+  </ul>
+</div>
